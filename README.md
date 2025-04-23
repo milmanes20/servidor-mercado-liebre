@@ -50,6 +50,7 @@ npm install
 ### 1. Servir Archivos HTML
 
 Completa la implementación para servir los archivos HTML desde la carpeta `views`:
+
 - `/` → `home.html`
 - `/login` → `login.html`
 - `/register` → `register.html`
@@ -57,6 +58,7 @@ Completa la implementación para servir los archivos HTML desde la carpeta `view
 ### 2. Servir Archivos Estáticos
 
 Implementa el manejo de archivos estáticos desde la carpeta `public`:
+
 - CSS
 - Imágenes
 - Otros recursos
@@ -64,6 +66,7 @@ Implementa el manejo de archivos estáticos desde la carpeta `public`:
 ### 3. Manejo de Formularios
 
 Implementa el manejo de solicitudes POST para:
+
 - `/login`
 - `/register`
 
@@ -77,16 +80,19 @@ Implementa el manejo de solicitudes POST para:
 ## Comandos Git para Subir los Cambios
 
 1. Verifica el estado de tus cambios:
+
    ```bash
    git status
    ```
 
 2. Agrega los archivos modificados:
+
    ```bash
    git add .
    ```
 
 3. Crea un commit con tus cambios:
+
    ```bash
    git commit -m "Implementación del servidor HTTP básico"
    ```
@@ -99,6 +105,7 @@ Implementa el manejo de solicitudes POST para:
 ## Evaluación
 
 Tu implementación será evaluada en base a:
+
 - Correcto manejo de rutas
 - Servicio adecuado de archivos estáticos
 - Manejo apropiado de métodos HTTP
@@ -113,4 +120,42 @@ Tu implementación será evaluada en base a:
 
 ## Dudas y Consultas
 
-Si tienes alguna duda durante la implementación, no dudes en consultar con el profesor o tus compañeros. 
+Si tienes alguna duda durante la implementación, no dudes en consultar con el profesor o tus compañeros.
+
+## Tests
+
+El proyecto incluye una suite de tests para verificar la correcta implementación del servidor. Los tests cubren:
+
+1. Respuestas a rutas GET:
+
+   - Ruta principal (/)
+   - Página de login (/login)
+   - Página de registro (/register)
+
+2. Manejo de archivos estáticos:
+
+   - Archivos CSS
+   - Imágenes
+
+3. Manejo de formularios POST:
+
+   - Login
+   - Registro
+   - Rutas inválidas
+
+4. Manejo de rutas inexistentes
+
+### Ejecutar los Tests
+
+Para ejecutar los tests, usa el siguiente comando:
+
+```bash
+npm test
+```
+
+Los tests verificarán que:
+
+- Las rutas devuelvan los archivos HTML correctos
+- Los archivos estáticos se sirvan con el tipo MIME apropiado
+- Las redirecciones funcionen correctamente
+- Las rutas inexistentes devuelvan 404
